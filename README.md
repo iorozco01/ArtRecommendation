@@ -3,13 +3,13 @@ This application is an art recommendation ML model that will grab art pieces cho
 
 ## Museum Repos:
   https://github.com/metmuseum/ (limited to 80 requests per second) <br />
-  *  Met API doesn't have Monet as public domain
+  *  Met API doesn't have Monet as public domain<br />
   https://api.artic.edu/docs/#introduction
-  *  Chicago has over 1000 paintings in public domain including some Van Goghs and Monets
+  *  Chicago has over 1000 paintings in public domain including some Van Goghs and Monets<br />
   https://data.rijksmuseum.nl/object-metadata/api/
-  *  Not a very large selection of popular artists available
+  *  Not a very large selection of popular artists available<br />
 
-  Harvard Repo requires API key
+  Harvard Repo requires API key<br />
 
 ## Overall Plan:
   1. Get images from Met API of Artwork
