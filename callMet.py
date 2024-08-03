@@ -18,11 +18,14 @@ def search_object(object_id):
     search_url = url + "/" + str(object_id)
     requested_art = requests.get(search_url)
 
-    # If the requested on is valid (free-use and exists) return it
+    # If the requested on is valid (free-use and exists and is a painting) return it
     if requested_art.status_code == 200:
         object_details = requested_art.json()
         if object_details.get('isPublicDomain', True):
-            return object_details
+            if object_details.get('objectName') == 'Painting':
+                return object_details
+            else:
+                print(f"Artwork with id {object_id} is not a painting object")
         else:
             print(f"Artwork with ID {object_id} is not in the public domain.")
     else:
@@ -66,5 +69,4 @@ for art_id in object_ids:
             print(f"Artwork with ID {art_id} downloaded.")
         else:
             print(f"Artwork with ID {art_id} has no primary image.")
-    else:
-        print(f"No artwork found for ID {art_id}")
+
