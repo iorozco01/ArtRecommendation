@@ -12,11 +12,10 @@ from matplotlib.ticker import MultipleLocator, FormatStrFormatter
 from dataclasses import dataclass
 
 import tensorflow as tf
-from tensorflow.keras import Sequential
-from tensorflow.keras.layers import Dense, Conv2D, MaxPooling2D, Dropout, Flatten
-from tensorflow.keras.datasets import cifar10
+from keras import Sequential
+from tensorflow.python.keras.layers import Dense, Conv2D, MaxPooling2D, Dropout, Flatten
+from keras import datasets
 from tensorflow.keras.utils import to_categorical
-
 
 # Fix seed to make training deterministic
 
